@@ -9,9 +9,10 @@ submitButton.addEventListener("mouseenter",()=>{
     if (!form.sub.validity.valid){
         submitButton.style.setProperty("cursor","not-allowed")
     }
-    else{
-        submitButton.style.setProperty("cursor","pointer")
-    }
+    
+})
+submitButton.addEventListener("mouseleave",()=>{
+    submitButton.style.setProperty("cursor","pointer")
 })
 
 form.addEventListener("submit", (event) => {
