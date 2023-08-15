@@ -1,0 +1,311 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+button,
+[type=button],
+[role=button] {
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* CSS */
+.container {
+  margin-inline: auto;
+  width: min(100% - 4rem, 1120px);
+}
+
+:root {
+  --size-1: 0.25rem;
+  --size-2: 0.5rem;
+  --size-3: 0.75rem;
+  --size-4: 1rem;
+  --size-5: 1.25rem;
+  --size-6: 1.5rem;
+  --size-7: 1.75rem;
+  --size-8: 2rem;
+  --size-9: 2.25rem;
+  --size-10: 2.5rem;
+  --size-11: 2.75rem;
+  --size-12: 3rem;
+  --size-13: 3.25rem;
+  --size-14: 3.5rem;
+  --size-15: 3.75rem;
+  --size-16: 4rem;
+  --size-17: 4.25rem;
+  --size-18: 4.5rem;
+  --size-19: 4.75rem;
+  --size-20: 5rem;
+  --size-21: 5.25rem;
+  --size-22: 5.5rem;
+  --size-23: 5.75rem;
+  --size-24: 6rem;
+  --size-25: 6.25rem;
+  --size-26: 6.5rem;
+  --size-27: 6.75rem;
+  --size-28: 7rem;
+  --size-29: 7.25rem;
+  --size-30: 7.5rem;
+  --size-31: 7.75rem;
+  --size-32: 8rem;
+  --size-33: 8.25rem;
+  --size-34: 8.5rem;
+  --size-35: 8.75rem;
+  --size-36: 9rem;
+  --blue: 223 87% 63%;
+  --pale-blue: 223 100% 88%;
+  --light-red: 354 100% 66%;
+  --gray: 0 0% 59%;
+  --very-dark-blue: 209 33% 12%;
+  --clr-blue: hsl(var(--blue));
+  --clr-pale-blue: hsl(var(--pale-blue));
+  --clr-light-red: hsl(var(--light-red));
+  --clr-gray: hsl(var(--gray));
+  --clr-very-dark-blue: hsl(var(--very-dark-blue));
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 300;
+  background-color: #fff;
+}
+
+.footer {
+  text-align: center;
+  padding-block: var(--size-8);
+}
+@media (width > 660px) {
+  .footer {
+    padding-block: var(--size-12);
+  }
+}
+.footer__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: var(--size-8);
+  list-style: none;
+  padding-left: 0;
+  gap: var(--size-5);
+  font-size: var(--size-4);
+}
+@media (width > 660px) {
+  .footer__list {
+    padding-block: var(--size-6);
+  }
+}
+.footer__link {
+  padding: var(--size-2);
+  border: 1px solid var(--clr-pale-blue);
+  display: flex;
+  align-items: center;
+  color: var(--clr-blue);
+  border-radius: 50%;
+}
+.footer__copyright {
+  font-size: calc((var(--size-2) + var(--size-3)) / 2);
+  color: var(--clr-gray);
+}
+@media (width > 660px) {
+  .footer__copyright {
+    font-size: var(--size-3);
+  }
+}
+
+.header__logo {
+  margin-inline: auto;
+  margin-block: var(--size-21) var(--size-9);
+  height: clamp(16px, 3vw, 1.625rem);
+}
+
+.hero {
+  text-align: center;
+}
+.hero .container {
+  max-width: 640px;
+}
+.hero__heading {
+  font-weight: 300;
+  color: var(--clr-gray);
+  font-size: clamp((var(--size-5) + var(--size-6)) / 2, 5vw, var(--size-12));
+}
+.hero__heading strong {
+  color: #000;
+}
+.hero__text {
+  font-size: var(--size-3);
+  margin-block: var(--size-3);
+}
+@media (width > 660px) {
+  .hero__text {
+    font-size: var(--size-5);
+  }
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--size-2);
+  margin-inline: var(--size-4);
+  margin-block: var(--size-8) var(--size-16);
+}
+.form > * {
+  --_padding-inline: var(--size-8);
+  --_padding-block: var(--size-3);
+  --_font-size: var(--size-3 );
+  flex: 1 0 100%;
+}
+@media (width > 660px) {
+  .form > * {
+    --_padding-block:var(--size-5);
+    --_font-size:var(--size-4);
+  }
+}
+.form__inputBox {
+  position: relative;
+}
+@media (width > 660px) {
+  .form__inputBox {
+    flex: 1.25 0 auto;
+  }
+}
+.form__input {
+  width: 100%;
+  font-size: var(--_font-size);
+  padding: var(--_padding-block) var(--_padding-inline);
+  line-height: 1;
+  border: 1px solid var(--clr-pale-blue);
+  border-radius: 100vmax;
+  outline: none;
+}
+.form__input::-webkit-input-placeholder {
+  color: var(--clr-pale-blue);
+}
+.form__input::-moz-placeholder {
+  color: var(--clr-pale-blue);
+}
+.form__input:-ms-input-placeholder {
+  color: var(--clr-pale-blue);
+}
+.form__input::-ms-input-placeholder {
+  color: var(--clr-pale-blue);
+}
+.form__input::placeholder {
+  color: var(--clr-pale-blue);
+  font-weight: 300;
+}
+.form__input:not(:placeholder-shown):invalid {
+  border-color: var(--clr-light-red);
+}
+.form__input:not(:placeholder-shown):invalid ~ .form__error {
+  display: block;
+}
+.form__error {
+  font-size: var(--size-3);
+  color: var(--clr-light-red);
+  font-style: italic;
+  display: none;
+}
+@media (width > 660px) {
+  .form__error {
+    text-align: start;
+    padding-top: var(--size-1);
+    padding-left: calc(1px + var(--_padding-inline));
+    position: absolute;
+  }
+}
+.form__button {
+  border-radius: 100vmax;
+  padding-block: var(--_padding-block);
+  background-color: var(--clr-blue);
+  color: #fff;
+  font-size: var(--_font-size);
+  font-weight: 600;
+  box-shadow: 0 var(--size-2) var(--size-2) hsl(var(--blue)/0.2);
+}
+.form__button:hover {
+  background-color: hsl(var(--blue)/0.8);
+  translate: 0 -1px;
+}
+@media (width > 660px) {
+  .form__button {
+    flex: 0.75 0 auto;
+  }
+}
+@media (width > 660px) {
+  .form {
+    gap: var(--size-4);
+    margin-inline: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
