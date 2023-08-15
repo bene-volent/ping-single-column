@@ -167,7 +167,16 @@ body {
   display: flex;
   align-items: center;
   color: var(--clr-blue);
+  background-color: #fff;
   border-radius: 50%;
+  transition-property: color, background-color;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
+.footer__link:hover {
+  color: #fff;
+  background-color: var(--clr-blue);
+  scale: 1.2;
 }
 .footer__copyright {
   font-size: calc((var(--size-2) + var(--size-3)) / 2);
